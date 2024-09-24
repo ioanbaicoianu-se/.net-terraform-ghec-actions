@@ -9,7 +9,7 @@ resource "azurerm_storage_account" "functions" {
 resource "azurerm_user_assigned_identity" "functions" {
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
-  name                = "mi-${var.application_name}-${var.environment_name}-fn"
+  name                = "mi-${var.application_name}-${var.environment_name}-fn" 
 }
 
 resource "azurerm_service_plan" "main" {
