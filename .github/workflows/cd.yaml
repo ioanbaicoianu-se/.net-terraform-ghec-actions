@@ -5,11 +5,11 @@ on:
     branches:
       - main
     paths:
-      - "001/src/terraform/**"
-      - "001/.github/workflows/cd.yaml"
+      - "src/terraform/**"
+      - ".github/workflows/cd.yaml" 
 
 env:
-  WORKING_DIRECTORY: "001/src/terraform"
+  WORKING_DIRECTORY: "src/terraform"
   APPLICATION_NAME: "aztf"
   LOCATION: "westus"
   ENVIRONMENT_NAME: "dev"
