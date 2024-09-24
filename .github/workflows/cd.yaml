@@ -51,21 +51,21 @@ jobs:
 
         terraform apply -auto-approve
 
-    - name: Failing on Apply, Destroyed all resources
-      if: failure()
-      env:
-        ARM_CLIENT_ID: ${{ vars.ARM_CLIENT_ID }}
-        ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-        ARM_SUBSCRIPTION_ID: ${{ vars.ARM_SUBSCRIPTION_ID }}
-        ARM_TENANT_ID: ${{ vars.ARM_TENANT_ID }}
-        BACKEND_STORAGE_ACCOUNT_NAME: ${{ vars.BACKEND_STORAGE_ACCOUNT_NAME }}
-        BACKEND_STORAGE_CONTAINER_NAME: ${{ vars.BACKEND_STORAGE_CONTAINER_NAME }}
-        BACKEND_RESOURCE_GROUP_NAME: ${{ vars.BACKEND_RESOURCE_GROUP_NAME }}
-        TF_VAR_application_name: ${{ env.APPLICATION_NAME }}
-        TF_VAR_environment_name: ${{ env.ENVIRONMENT_NAME }}
-        TF_VAR_location: ${{ env.LOCATION }}
-        TF_BACKEND_KEY: ${{ env.APPLICATION_NAME }}-${{ env.ENVIRONMENT_NAME }}
-      working-directory: ${{ env.WORKING_DIRECTORY }}
-      run: |
-        terraform destroy -auto-approve
+    # - name: Failing on Apply, Destroyed all resources
+    #   if: failure()
+    #   env:
+    #     ARM_CLIENT_ID: ${{ vars.ARM_CLIENT_ID }}
+    #     ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+    #     ARM_SUBSCRIPTION_ID: ${{ vars.ARM_SUBSCRIPTION_ID }}
+    #     ARM_TENANT_ID: ${{ vars.ARM_TENANT_ID }}
+    #     BACKEND_STORAGE_ACCOUNT_NAME: ${{ vars.BACKEND_STORAGE_ACCOUNT_NAME }}
+    #     BACKEND_STORAGE_CONTAINER_NAME: ${{ vars.BACKEND_STORAGE_CONTAINER_NAME }}
+    #     BACKEND_RESOURCE_GROUP_NAME: ${{ vars.BACKEND_RESOURCE_GROUP_NAME }}
+    #     TF_VAR_application_name: ${{ env.APPLICATION_NAME }}
+    #     TF_VAR_environment_name: ${{ env.ENVIRONMENT_NAME }}
+    #     TF_VAR_location: ${{ env.LOCATION }}
+    #     TF_BACKEND_KEY: ${{ env.APPLICATION_NAME }}-${{ env.ENVIRONMENT_NAME }}
+    #   working-directory: ${{ env.WORKING_DIRECTORY }}
+    #   run: |
+    #     terraform destroy -auto-approve
 
