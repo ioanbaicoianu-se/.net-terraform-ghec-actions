@@ -12,8 +12,16 @@ resource "azurerm_user_assigned_identity" "functions" {
   name                = "mi-${var.application_name}-${var.environment_name}-fn"
 }
 
+resource "azurerm_service_plan" "main" {
+  name                = "asp-${var.application_name}-${var.environment_name}"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
+  os_type             = "Linux"
+  sku_name            = "Y1"
+}
+
 resource "azurerm_linux_function_app" "foo" {
-  name                = "func-${var.application_name}-${var.environment_name}"
+  name                = "func-${var.application_name}-${var.environment_name}-foo"
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
 
@@ -22,12 +30,15 @@ resource "azurerm_linux_function_app" "foo" {
   service_plan_id            = azurerm_service_plan.main.id
 
   site_config {
+    application_insights_key               = azurerm_application_insights.main.instrumentation_key
+    application_insights_connection_string = azurerm_application_insights.main.connection_string
+
     application_stack {
       dotnet_version = "6.0"
-      cors {
-        allowed_origins     = ["https://portal.azure.com"]
-        support_credentials = true
-      }
+    }
+    cors {
+      allowed_origins     = ["https://portal.azure.com"]
+      support_credentials = true
     }
   }
 
@@ -37,17 +48,7 @@ resource "azurerm_linux_function_app" "foo" {
   }
 
   app_settings = {
-    "WEBSITE_RUN_FROM_PACKAGE"       = 1
-    "APPINSIGHTS_INSTRUMENTATIONKEY" = data.azurerm_application_insights.main.instrumentation_key
+    "WEBSITE_RUN_FROM_PACKAGE" = 1
   }
 }
-
-resource "azurerm_service_plan" "main" {
-  name                = "asp-${var.application_name}-${var.environment_name}"
-  resource_group_name = azurerm_resource_group.main.name
-  location            = azurerm_resource_group.main.location
-  os_type             = "Linux"
-  sku_name            = "Y1"
-}
-
 
