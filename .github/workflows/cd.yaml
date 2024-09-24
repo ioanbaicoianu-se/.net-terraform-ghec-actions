@@ -18,10 +18,10 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3
+      - uses: actions/checkout@3.1.2
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@3
+        uses: hashicorp/setup-terraform@3.1.2
         with:
           terraform_version: 1.5.5
           # is a feature of this action which i have found makes it more difficult to use
