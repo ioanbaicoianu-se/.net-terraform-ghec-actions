@@ -3,3 +3,4 @@
 src/terraform/.terraform.lock.hcl
 src/terraform/.terraform.tfstate.lock.info
 .DS_Store
+**/.vs/**
