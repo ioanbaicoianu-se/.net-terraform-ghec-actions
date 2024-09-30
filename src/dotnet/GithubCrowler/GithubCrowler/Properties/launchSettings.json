@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "dotnet": {
+    "GithubCrowler": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7242",
+      "commandLineArgs": "--port 7287",
       "launchBrowser": false
     }
   }
