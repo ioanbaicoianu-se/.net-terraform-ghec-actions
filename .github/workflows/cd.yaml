@@ -5,9 +5,9 @@ on:
     branches:
     - main
     paths:
-    - 'src/terraform/**'
-    - 'src/dotnet/**'
-    - '.github/workflows/**'
+    - "src/terraform/**"
+    - "src/dotnet/**"
+    - ".github/workflows/**"
 
 env:
   TERRAFORM_WORKING_DIRECTORY: "src/terraform"
