@@ -1,9 +1,9 @@
 {
-    "azureFunctions.deploySubpath": "src/dotnet/GithubCrowler/bin/Release/net6.0/publish",
+    "azureFunctions.deploySubpath": "src/dotnet/GitHubCrowler/bin/Release/net6.0/publish",
     "azureFunctions.projectLanguage": "C#",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.projectSubpath": "src/dotnet/GithubCrowler",
+    "azureFunctions.projectSubpath": "src/dotnet/GitHubCrowler",
     "azureFunctions.preDeployTask": "publish (functions)",
     "dotnet.defaultSolution": "GithubCrowler.sln"
 }

@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace GithubCrowler
+namespace GitHubCrowler
 {
-    public static class GithubCrowler
+    public static class GitHubCrowler
     {
-        [FunctionName("GithubCrowler")]
+        [FunctionName("GitHubCrowler")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
