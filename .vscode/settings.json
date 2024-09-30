@@ -5,5 +5,5 @@
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.projectSubpath": "src/dotnet/GitHubCrowler",
     "azureFunctions.preDeployTask": "publish (functions)",
-    "dotnet.defaultSolution": "GithubCrowler.sln"
+    "dotnet.defaultSolution": "GitHubCrowler.sln"
 }
