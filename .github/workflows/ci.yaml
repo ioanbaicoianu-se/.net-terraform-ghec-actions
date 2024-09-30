@@ -23,5 +23,12 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
       working-directory: ./src/dotnet/GithubCrowler
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal --filter Category=Unit
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+
 
 
