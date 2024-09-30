@@ -8,6 +8,7 @@ terraform {
   backend "azurerm" {
   }
 }
+
 provider "azurerm" {
   features {
     key_vault {
