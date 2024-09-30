@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zRJQ9MsbJPY=",
+  "dgSpecHash": "Tf31BdPuWr4=",
   "success": true,
-  "projectFilePath": "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GitHubCrowler.UnitTests/GitHubCrowler.UnitTests.csproj",
+  "projectFilePath": "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GithubCrowler.UnitTests/GithubCrowler.UnitTests.csproj",
   "expectedPackageFiles": [
     "/Users/ioansorin/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/Users/ioansorin/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512",

@@ -7,7 +7,7 @@ namespace GitHubCrowler
 {
     public class GitHubCrowler
     {
-        [FunctionName("GitHubCrowler")]
+        [FunctionName("GitHubCrowler")] 
         public void Run([ServiceBusTrigger("myqueue", Connection = "")]string myQueueItem, ILogger log)
         {
             log.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
