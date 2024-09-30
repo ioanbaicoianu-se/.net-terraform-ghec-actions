@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GitHubCrowler.UnitTests/GitHubCrowler.UnitTests.csproj": {}
+    "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GithubCrowler.UnitTests/GithubCrowler.UnitTests.csproj": {}
   },
   "projects": {
-    "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GitHubCrowler.UnitTests/GitHubCrowler.UnitTests.csproj": {
+    "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GithubCrowler.UnitTests/GithubCrowler.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GitHubCrowler.UnitTests/GitHubCrowler.UnitTests.csproj",
-        "projectName": "GitHubCrowler.UnitTests",
-        "projectPath": "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GitHubCrowler.UnitTests/GitHubCrowler.UnitTests.csproj",
+        "projectUniqueName": "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GithubCrowler.UnitTests/GithubCrowler.UnitTests.csproj",
+        "projectName": "GithubCrowler.UnitTests",
+        "projectPath": "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GithubCrowler.UnitTests/GithubCrowler.UnitTests.csproj",
         "packagesPath": "/Users/ioansorin/.nuget/packages/",
-        "outputPath": "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GitHubCrowler.UnitTests/obj/",
+        "outputPath": "/Users/ioansorin/Mine/Projects/DevOps/terraform-azure/azure-terraformer-course/001 - deployment .NET w Terraform and Github Actions/src/dotnet/GitHubCrowler/GithubCrowler.UnitTests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ioansorin/.nuget/NuGet/NuGet.Config"
