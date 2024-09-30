@@ -9,7 +9,7 @@ on:
 
 env:
   DOTNET_VERSION: '6.0.401' # The .NET SDK version to use
-  WORKING_DIRECTORY: ./src/dotnet/GithubCrowler
+  WORKING_DIRECTORY: ./src/dotnet/GitHubCrowler
 
 jobs:
   build:
