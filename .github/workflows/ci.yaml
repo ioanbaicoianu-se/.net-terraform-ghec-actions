@@ -2,7 +2,6 @@ name: ci
 
 on:
   push:
-  pull_request:
     branches:
     - main
     paths:
@@ -18,19 +17,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
+
     - name: Install dependencies
       run: dotnet restore
       working-directory: ${{ env.WORKING_DIRECTORY }}
+
     - name: Build
       run: dotnet build --configuration Release --no-restore
       working-directory: ${{ env.WORKING_DIRECTORY }}
+
     - name: Test
       run: dotnet test --no-restore --verbosity normal --filter Category=Unit
       working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    - name: Publish
+      run: dotnet publish **/GitHubCrowler.csproj -c Release -o ./publish
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+
+    - name: Generate Deployment Package
+      run: |
+        zip -r ../deployment.zip ./
+      working-directory: ${{ env.WORKING_DIRECTORY }}/publish
+
+    - name: Upload Deployment Package
+      uses: actions/upload-artifact@v2
+      with:
+        name: function-deployment
+        path: ${{ env.DOTNET_WORKING_DIRECTORY }}/deployment.zip
+
 
 
 
